@@ -1,0 +1,12 @@
+{
+  // F5 ejecuta la app en el dispositivo elegido en la barra inferior de VS Code.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Reportes IA PDF (debug)",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+name: reportes_pdf_ia
+description: "Reportes PDF generados por IA y menú Compartir nativo (pdf + printing + share_plus)."
+# Evita publicar por accidente el ejemplo en pub.dev.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  # printing 5.15 exige Dart >= 3.12 y Flutter >= 3.41.
+  # Probado con Flutter 3.47.5 / Dart 3.13.4.
+  sdk: ^3.12.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Motor de layout declarativo para construir PDF con "widgets" (100 % Dart,
+  # sin código nativo). Produce los bytes del documento: Uint8List.
+  pdf: ^3.13.1
+
+  # Puente nativo del PDF: widget PdfPreview (rasteriza las páginas),
+  # diálogo de impresión del sistema y "Guardar como PDF".
+  printing: ^5.15.1
+
+  # Abre el menú Compartir nativo: Intent ACTION_SEND en Android,
+  # UIActivityViewController en iOS. API nueva: SharePlus.instance.share().
+  share_plus: ^13.3.1
+
+  # Rutas del sistema de archivos de cada plataforma
+  # (directorio temporal y directorio de documentos de la app).
+  path_provider: ^2.1.6
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  # Solo para pruebas: permite simular el menú Compartir sin dispositivo.
+  share_plus_platform_interface: ^7.2.0
+
+flutter:
+  uses-material-design: true
+
+  # Las mismas fuentes TTF se usan en la UI y dentro del PDF.
+  # Embeberlas garantiza tildes, ñ y signos (¿ ¡ « ») en cualquier dispositivo,
+  # sin depender de internet ni de las fuentes del sistema.
+  # Noto Sans y Noto Sans Mono: licencia SIL Open Font License (assets/fonts/OFL.txt).
+  fonts:
+    - family: NotoSans
+      fonts:
+        - asset: assets/fonts/NotoSans-Regular.ttf
+        - asset: assets/fonts/NotoSans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/NotoSans-Italic.ttf
+          style: italic
+    - family: NotoSansMono
+      fonts:
+        - asset: assets/fonts/NotoSansMono-Regular.ttf
