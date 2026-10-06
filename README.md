@@ -16,8 +16,6 @@ Paquetes: [`pdf`](https://pub.dev/packages/pdf) · [`printing`](https://pub.dev/
 
 📄 PDF de ejemplo generado por la app: [`docs/ejemplo_reporte_sentimiento.pdf`](docs/ejemplo_reporte_sentimiento.pdf)
 
-🎤 Presentación de la exposición (PowerPoint editable): [`Presentacion_Tema13_Reportes_PDF.pptx`](Presentacion_Tema13_Reportes_PDF.pptx) · Guion: [`GUIA_EXPOSICION.md`](GUIA_EXPOSICION.md)
-
 ---
 
 ## ¿Qué demuestra este proyecto?
