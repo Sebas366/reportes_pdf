@@ -16,6 +16,8 @@ Paquetes: [`pdf`](https://pub.dev/packages/pdf) · [`printing`](https://pub.dev/
 
 📄 PDF de ejemplo generado por la app: [`docs/ejemplo_reporte_sentimiento.pdf`](docs/ejemplo_reporte_sentimiento.pdf)
 
+🎤 Presentación de la exposición (PowerPoint editable): [`Presentacion_Tema13_Reportes_PDF.pptx`](Presentacion_Tema13_Reportes_PDF.pptx)
+
 ---
 
 ## ¿Qué demuestra este proyecto?
@@ -78,8 +80,8 @@ flutter doctor
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/TU_USUARIO/reportes_pdf_ia.git
-cd reportes_pdf_ia
+git clone https://github.com/Sebas366/reportes_pdf.git
+cd reportes_pdf
 
 # 2. Descargar dependencias
 flutter pub get
